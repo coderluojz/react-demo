@@ -1,0 +1,55 @@
+.calendar {
+  border: 1px solid #aaa;
+  padding: 16px;
+  width: 300px;
+  height: 250px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 12px;
+
+    .btn {
+      cursor: pointer;
+    }
+  }
+
+  .days {
+    display: flex;
+    flex-wrap: wrap;
+
+    .prev,
+    .day,
+    .next {
+      position: relative;
+      width: calc(100% / 7);
+      text-align: center;
+      line-height: 30px;
+      &:hover {
+        background-color: #f3f3f3;
+        cursor: pointer;
+        border-radius: 2px;
+      }
+      &.today::before {
+        content: '';
+        position: absolute;
+        border: 1px solid #1890ff;
+        border-radius: 2px;
+        inset: 0;
+        z-index: 0;
+      }
+      &.selected {
+        background-color: #1890ff;
+        border-radius: 2px;
+        color: #ffffff;
+      }
+    }
+
+    .prev,
+    .next {
+      color: #bfbfbf;
+    }
+  }
+}

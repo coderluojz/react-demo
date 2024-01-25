@@ -1,5 +1,6 @@
 import './App.css'
 import CalendarDemo from './calendar-demo'
+import NextInput from './next-input'
 import StateWrapper from './state-wpper'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <CalendarDemo />
       <StateWrapper />
+      <NextInput />
     </div>
   )
 }
